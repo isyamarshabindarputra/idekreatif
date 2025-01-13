@@ -1,5 +1,5 @@
 <?php
-
+// test
 $host ="localhot";
 $username = "root";
 $password ="";

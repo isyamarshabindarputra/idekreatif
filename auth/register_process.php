@@ -20,6 +20,7 @@ sesseion_start();
     }
     header('Location : login.php');
         exit();
+        //tes
  }
  $conn->close();
  ?>

@@ -1,3 +1,17 @@
+<?php
+session_start();
+$notification =$_SESSION['notification'] ?? null;
+if($notification){
+  unset($_SESSION['notification']);
+}
+if (isset($_SESSION["username"]|| isset($_SESSION["role"]))){
+  $_SESSION['notification'] =[
+    'type' = 'denger',
+    'message' = 'silahkan longout terlebih dahulu'
+  ];
+  header('location: ../dashboard.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

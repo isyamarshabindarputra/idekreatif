@@ -1,13 +1,13 @@
 <?php
 // test
-$host ="localhot";
+$host ="localhost";
 $username = "root";
 $password ="";
 $database="idekreatif";
 
-$conn = mysqli_connect($host,$username,$password,$database);
+$conn = mysqli_connect($host, $username, $password, $database);
 
-if ($conn->connection_error){
-    die ("Databaese gagal terkoneksi :".$conn->connection_error);
+if ($conn->connect_error) {
+    die ("Databaese gagal terkoneksi :" . $conn->connect_error);
     
 }

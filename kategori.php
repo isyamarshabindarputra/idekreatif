@@ -8,7 +8,7 @@ include '.includes/toast_notification.php';
     <div class="card">
         <div calss="card-header d-flex justify-content-between align-items-center">
             <h4>Data kategori</h4>
-            <button type="button" calss="btn btn-primary" data-bs-toggle="modal" data-bs-target=#addCategory>tambah kategori</button>
+            <button type="button" calss="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCategory">tambah kategori</button>
         </div>
         <div class="card-body">
             <div class="table-responsive text-nowrap">
@@ -20,7 +20,7 @@ include '.includes/toast_notification.php';
                         <th width="150px">pilihan</th>
                     </tr>
                 </thead>
-                <tbody class="table-border-bottom-0"></tbody>
+                <tbody class="table-border-bottom-0">
                 <?php
                 $index = 1;
                 $query ="SELECT * FROM categories";
@@ -33,8 +33,8 @@ include '.includes/toast_notification.php';
                     <td>
                         <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                <i class="dropdown-menu"></i>
-                            </button>
+                                <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>   
                             <div class="dropdown-menu">
                                 <a href="#" class="dropdown-item" data-bs-toggel="modal" data-bs-target="#editcategory_<?=$category['category_id'];?>"><i class="bx bx-edit-alt me-2"></i>edit</a>
                                 <a href="#" class="dropdown-item" data-bs-toggel="modal" data-bs-target="#deletecategory_<?=$category['category_id'];?>"><i class="bx bx-trash me-2"></i>delete</a> 
@@ -43,6 +43,8 @@ include '.includes/toast_notification.php';
                     </td>
                 </tr>
                 <?php endwhile; ?>
+                </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -76,12 +78,12 @@ include '.includes/toast_notification.php';
 		</div>
 	</div>
 </div>
-<!-- Modal untuk Update Data Kategori -->
-<div id="editCategory_<?php echo $category['category_id']; ?>" class="modal fade" tabindex="-1" aria-hidden="true">
+<!-- Modal untuk hapus Data Kategori -->
+<div class="modal fade" id="editCategory_<?php echo $category['category_id']; ?>" class="modal fade" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Update Data Kategori</h5>
+                <h5 class="modal-title">hapus Kategori</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">

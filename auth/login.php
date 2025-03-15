@@ -5,8 +5,7 @@
     <!-- Logo -->
     <div class="app-brand justify-content-center">
       <a href="index.html" class="app-brand-link gap-2">
-        <span class="app-brand-text demo text-uppercase fw-bolder">IdeKreatif</span>
-      </a>
+        <span class="app-brand-text demo text-uppercase fw-bolder">IdeKreatif</span></a>
     </div>
     <!-- /Logo -->
     <h4 class="mb-2">Selamat datang di IdeKreatif! 👋</h4>
